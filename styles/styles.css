@@ -42,7 +42,7 @@ body{
     z-index: 0;
 }
 
-.linkImageWrapper{
+.startGameBtnWrapper{
     grid-row: 1;
     grid-column: 1;
     display: flex;
@@ -61,17 +61,31 @@ body{
     min-width: 10.625rem;
 }
 
-.wrappedImage{
-    width: 3.5rem;
+@keyframes growButton{
+    from {width: 3.5rem; height: 3.5rem; background-size: 3.5rem;}
+    to {width: 4rem; height: 4rem; background-size: 4rem;}
 }
 
-.wrappedImage:hover{
+input[type="range"] {
+    accent-color: white;
+}
+
+.startGameBtn{
+    background-image: url("/img/startPlayButton.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    background-size:3.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    border: none;
+}
+
+.startGameBtn:hover{
     width: 4rem;
+    height: 4rem;
+    background-size: 4rem;
     animation-name: growButton;
     animation-duration: 0.5s;
-}
-
-@keyframes growButton{
-    from {width: 3.5rem;}
-    to {width: 4rem;}
+    cursor: pointer;
 }
