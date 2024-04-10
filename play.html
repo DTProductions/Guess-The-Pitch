@@ -4,29 +4,33 @@
     <head>
         <title>Guess The Pitch</title>
         <link rel="stylesheet" href="styles/styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
-    <body class="main-center">
-        <img src="img/playAudioButton.svg">
-        
-        <input type="range">
-
-        <div class="pianoDiv">
-            <div class="whiteKeysDiv">
-                <button data-key-id="C" class="whiteKey left"></button>
-                <button data-key-id="D" class="whiteKey"></button>
-                <button data-key-id="E" class="whiteKey"></button>
-                <button data-key-id="F" class="whiteKey"></button>
-                <button data-key-id="G" class="whiteKey"></button>
-                <button data-key-id="A" class="whiteKey"></button>
-                <button data-key-id="B" class="whiteKey"></button>
+    <body>
+        <div class="mainCenter playArea">
+            <div class="audioControlsDiv">
+                <button id="playAudioBtn" class="playAudioBtn"></button>
+                <input type="range">
             </div>
-            
-            <div class="blackKeysDiv">
-                <button data-key-id="C#" class="blackKey leftmost"></button>
-                <button data-key-id="D#" class="blackKey mid"></button>
-                <button data-key-id="F#" class="blackKey left"></button>
-                <button data-key-id="G#" class="blackKey left"></button>
-                <button data-key-id="A#" class="blackKey left"></button>
+
+            <div class="pianoDiv">
+                <div class="whiteKeysDiv">
+                    <button data-key-id="C" class="whiteKey left"></button>
+                    <button data-key-id="D" class="whiteKey"></button>
+                    <button data-key-id="E" class="whiteKey"></button>
+                    <button data-key-id="F" class="whiteKey"></button>
+                    <button data-key-id="G" class="whiteKey"></button>
+                    <button data-key-id="A" class="whiteKey"></button>
+                    <button data-key-id="B" class="whiteKey"></button>
+                </div>
+                
+                <div class="blackKeysDiv">
+                    <button data-key-id="C#" class="blackKey leftmost"></button>
+                    <button data-key-id="D#" class="blackKey mid"></button>
+                    <button data-key-id="F#" class="blackKey left"></button>
+                    <button data-key-id="G#" class="blackKey left"></button>
+                    <button data-key-id="A#" class="blackKey left"></button>
+                </div>
             </div>
         </div>
     </body>
