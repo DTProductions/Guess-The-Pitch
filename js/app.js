@@ -49,13 +49,19 @@ function initializeTrainer(){
             if(whiteKeys[i].dataset.keyId == selectedKey.substring(0, selectedKey.length - 1)){
                 loadWinPage(selectedKey);
             } else {
-                alert("You pressed " + whiteKeys[i].dataset.keyId + ", it was " + selectedKey.substring(0, selectedKey.length - 1));
+                loadDefeatPage(selectedKey, whiteKeys[i].dataset.keyId);
             }
         });
     }
 }
 
-async function loadWinPage(selectedKey){
+function setupResultsPage(correctNote){
+    document.getElementById("correctNote").textContent = correctNote.substring(0, correctNote.length - 1);
+    setupAudioControls(correctNote);
+    document.getElementById("continueBtn").addEventListener("click", loadPlayPage);
+}
+
+async function loadWinPage(correctNote){
     try{
         const response = await fetch("win.html");
         if(!response.ok){
@@ -63,15 +69,25 @@ async function loadWinPage(selectedKey){
         }
 
         document.getElementsByTagName("html")[0].innerHTML = await response.text();
-        document.getElementById("correctNote").textContent = selectedKey.substring(0, selectedKey.length - 1);
-        setupAudioControls(selectedKey);
-        document.getElementById("continueBtn").addEventListener("click", loadPlayPage);
+        setupResultsPage(correctNote);
     }
     catch(error){
         console.log(error);
     }
 }
 
-function loadDefeatPage(correctNote){
+async function loadDefeatPage(correctNote, selectedNote){
+    try{
+        const response = await fetch("lost.html");
+        if(!response.ok){
+            throw new Error("Could not load page");
+        }
 
+        document.getElementsByTagName("html")[0].innerHTML = await response.text();
+        setupResultsPage(correctNote);
+        document.getElementById("resultsDesc").textContent = "You guessed " + selectedNote + ", but it was:";
+    }
+    catch(error){
+        console.log(error);
+    }
 }
