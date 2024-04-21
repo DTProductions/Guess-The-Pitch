@@ -5,6 +5,7 @@
 html{
     background-color: var(--primary-color);
     font-size: 40px;
+    font-family: "League Spartan", sans-serif;
 }
 
 body{
@@ -180,4 +181,48 @@ input[type="range"] {
 
 .playAudioBtn:hover{
     cursor: pointer;
+}
+
+.continueBtn{
+    color: white;
+    margin: 0;
+    font-size: 1rem;
+    background-color: transparent;
+    border: none;
+}
+
+.continueBtn:hover{
+    cursor: pointer;
+}
+
+.resultsTitle{
+    color: white;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.resultsTextNote{
+    color: white;
+    margin: 0;
+    font-size: 4rem;
+    padding-top: 0.5rem;
+    margin-left: 0.25rem;
+}
+
+.resultsControlsDisplay{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.resultsWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resultsDesc{
+    color: white;
+    margin: 0;
+    margin-bottom: 0.5rem;
 }
