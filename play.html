@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Guess The Pitch</title>
+        <link rel="stylesheet" href="styles/styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script src="js/app.js"></script>
+    </head>
+    <body>
+        <div class="mainCenter playArea">
+            <div class="audioControlsDiv">
+                <button id="playAudioBtn" class="playAudioBtn"></button>
+                <input type="range" id="volumeSlider" min="0" max="1" step="0.01">
+            </div>
+
+            <div class="pianoDiv">
+                <div class="whiteKeysDiv">
+                    <button data-key-id="C" class="whiteKey left"></button>
+                    <button data-key-id="D" class="whiteKey"></button>
+                    <button data-key-id="E" class="whiteKey"></button>
+                    <button data-key-id="F" class="whiteKey"></button>
+                    <button data-key-id="G" class="whiteKey"></button>
+                    <button data-key-id="A" class="whiteKey"></button>
+                    <button data-key-id="B" class="whiteKey"></button>
+                </div>
+                
+                <div class="blackKeysDiv">
+                    <button data-key-id="Db" class="blackKey leftmost"></button>
+                    <button data-key-id="Eb" class="blackKey mid"></button>
+                    <button data-key-id="Gb" class="blackKey left"></button>
+                    <button data-key-id="Ab" class="blackKey left"></button>
+                    <button data-key-id="Bb" class="blackKey left"></button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
