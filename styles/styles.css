@@ -236,3 +236,15 @@ input[type="range"] {
     margin: 0;
     margin-bottom: 0.5rem;
 }
+
+@media only screen and (max-width:511px) {
+    html{
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width:383px){
+    html{
+        font-size: 25px;
+    }
+}
