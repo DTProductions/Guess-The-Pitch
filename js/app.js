@@ -69,6 +69,7 @@ async function loadWinPage(correctNote){
         }
 
         document.getElementsByTagName("html")[0].innerHTML = await response.text();
+        document.getElementsByTagName("html")[0].className = "winHtml";
         setupResultsPage(correctNote);
     }
     catch(error){

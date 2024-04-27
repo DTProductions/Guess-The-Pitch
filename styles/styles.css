@@ -207,7 +207,7 @@ input[type="range"] {
 
 .resultsTitle{
     color: white;
-    white-space: nowrap;
+    text-align: center;
     margin: 0;
 }
 
@@ -238,13 +238,19 @@ input[type="range"] {
 }
 
 @media only screen and (max-width:511px) {
-    html{
+    .introHtml{
         font-size: 30px;
     }
 }
 
 @media only screen and (max-width:383px){
-    html{
+    .introHtml{
         font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 430px){
+    .winHtml{
+        font-size: 30px;
     }
 }
