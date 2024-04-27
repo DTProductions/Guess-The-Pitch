@@ -85,6 +85,7 @@ async function loadDefeatPage(correctNote, selectedNote){
         }
 
         document.getElementsByTagName("html")[0].innerHTML = await response.text();
+        document.getElementsByTagName("html")[0].className = "";
         setupResultsPage(correctNote);
         document.getElementById("resultsDesc").textContent = "You guessed " + selectedNote + ", but it was:";
     }
