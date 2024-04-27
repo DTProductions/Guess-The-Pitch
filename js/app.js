@@ -6,6 +6,7 @@ async function loadPlayPage(){
         }
 
         document.getElementsByTagName("html")[0].innerHTML = await response.text();
+        document.getElementsByTagName("html")[0].className = "playHtml";
         initializeTrainer();
     }
     catch(error){
