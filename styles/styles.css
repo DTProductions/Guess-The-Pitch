@@ -85,7 +85,7 @@ input[type="range"] {
 }
 
 .startGameBtn{
-    background-image: url("/img/startPlayButton.svg");
+    background-image: url("/Guess-The-Pitch/img/startPlayButton.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-color: transparent;
@@ -179,7 +179,7 @@ input[type="range"] {
 }
 
 .playAudioBtn{
-    background-image: url("/img/playAudioButton.svg");
+    background-image: url("/Guess-The-Pitch/img/playAudioButton.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 3.33rem;

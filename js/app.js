@@ -26,7 +26,7 @@ keys.push("C5", "Db5", "D5", "Eb5", "E5", "F5", "Gb5", "G5", "Ab5", "A5", "Bb5",
 keys.push("C6");
 
 function setupAudioControls(selectedKey){
-    const audioPlayer = new Audio("../audio/" + selectedKey + ".ogg");
+    const audioPlayer = new Audio("/Guess-The-Pitch/audio/" + selectedKey + ".ogg");
     audioPlayer.volume = 0.5;
     audioPlayer.play();
 
